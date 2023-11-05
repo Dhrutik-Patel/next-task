@@ -12,40 +12,30 @@ const Navbar = () => {
     };
 
     return (
-        <nav className='bg-indigo-800 p-7 select-none'>
+        <nav className='bg-white p-7 select-none shadow-md shadow-grey-500/50'>
             <div className='container mx-auto flex justify-between items-center'>
                 {/* Left Side - Logo */}
-                <div className='text-white font-bold text-2xl'>
-                    <a href='#' className='text-white'>
-                        NEXT TASK
-                    </a>
+                <div className='font-bold text-2xl'>
+                    <a href='#'>NEXT TASK</a>
                 </div>
                 {/* Middle - Navigation Links */}
-                <div className='hidden md:flex space-x-8 text-lg font-medium'>
-                    <a href='#' className='text-white'>
-                        Home
-                    </a>
-                    <a href='#' className='text-white'>
-                        About
-                    </a>
-                    <a href='#' className='text-white'>
-                        Services
-                    </a>
-                    <a href='#' className='text-white'>
-                        Contact
-                    </a>
+                <div className='hidden md:flex space-x-8 text-lg font-semibold'>
+                    <a href='#'>Home</a>
+                    <a href='#'>About</a>
+                    <a href='#'>Services</a>
+                    <a href='#'>Contact</a>
                 </div>
                 {/* Right Side - Login/Sign-Up Buttons */}
-                <div className='hidden md:flex space-x-5 text-lg font-medium'>
+                <div className='hidden md:flex space-x-5 text-lg font-semibold'>
                     <a
                         href='#'
-                        className='px-5 py-2 bg-blue-500 rounded hover:bg-blue-600 transition-all duration-500'
+                        className='px-5 py-2 bg-orange-500 rounded hover:bg-orange-600 hover:text-white transition-all duration-500'
                     >
                         Login
                     </a>
                     <a
                         href='#'
-                        className='px-5 py-2 bg-blue-500 rounded hover:bg-blue-600 transition-all duration-500'
+                        className='px-5 py-2 bg-orange-500 rounded hover:bg-orange-600 hover:text-white transition-all duration-500'
                     >
                         Sign Up
                     </a>
@@ -53,7 +43,7 @@ const Navbar = () => {
                 <div className='md:hidden'>
                     <button
                         onClick={toggleMobileMenu}
-                        className='text-white p-2 focus:outline-none'
+                        className=' p-2 focus:outline-none'
                     >
                         {isMobileMenuOpen ? <Cancel /> : <ThreeBars />}
                     </button>
@@ -61,7 +51,7 @@ const Navbar = () => {
             </div>
             {isMobileMenuOpen && (
                 <div className='md:hidden'>
-                    <div className='flex flex-col space-y-5 text-white text-center text-lg font-medium'>
+                    <div className='flex flex-col space-y-5  text-center text-lg font-semibold'>
                         <a href='#' className='p-2'>
                             Home
                         </a>
@@ -79,13 +69,13 @@ const Navbar = () => {
                         <div className='flex flex-col space-y-5'>
                             <a
                                 href='#'
-                                className='px-5 py-2 bg-blue-500 rounded hover:bg-blue-600 transition-all duration-500'
+                                className='px-5 py-2 bg-orange-500 rounded hover:bg-orange-600 hover:text-white transition-all duration-500'
                             >
                                 Login
                             </a>
                             <a
                                 href='#'
-                                className='px-5 py-2 bg-blue-500 rounded hover:bg-blue-600 transition-all duration-500'
+                                className='px-5 py-2 bg-orange-500 rounded hover:bg-orange-600 hover:text-white transition-all duration-500'
                             >
                                 Sign Up
                             </a>
