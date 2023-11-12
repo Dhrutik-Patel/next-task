@@ -1,8 +1,9 @@
 import { connectDB } from '@/helper/database';
 import User from '@/models/userModel';
 import { NextResponse } from 'next/server';
+import bcrypt from 'bcryptjs';
 
-// connectDB();
+connectDB();
 
 // API route to get all users from database and return as JSON
 // GET /api/users
@@ -34,6 +35,9 @@ export async function POST(request, response) {
         email,
         password,
     });
+
+    // Encrypt password before saving to database
+    user.password = await bcrypt.hash(user.password, 10);
 
     try {
         const createdUser = await user.save();
